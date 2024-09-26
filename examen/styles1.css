@@ -1,0 +1,23 @@
+h1{
+    text-align:center;
+}
+.primero{
+    text-align:center;
+}
+.boton{
+
+    display:flex:
+    color:orange; 
+    border: 5px solid orange; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}
+.boton1{
+    display:flex:
+    color: blue; 
+    border: 5px solid blue; 
+    padding: 10px 20px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+}

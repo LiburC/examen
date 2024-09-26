@@ -1,0 +1,101 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 10px;
+    padding: 10px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 200px 100px 100px 100px;
+    gap:10px;
+    grid-template-areas: 
+    "primero primero primero"
+    "segundo segundo segundo"
+    "uno dos tres"
+    "vertical1 horizontal1 horizontal1"
+    "vertical1 horizontal2 horizontal2";
+
+}
+.primero{
+    grid-area: primero;
+    background-color: blue;
+}
+@keyframes backgroundChange{
+    0%{background-color: white;}
+    50%{background-color: lightblue;}
+    100%{background-color: white;}
+}
+.primero{
+    animation: backgroundChange 3s infinite;
+}
+
+
+.segundo{
+    grid-area:segundo;
+    background-color:red;
+}
+.segundo:hover{
+    background: rgb(165, 66, 235);
+}
+
+
+.lostres1{
+    grid-area:uno;
+    background-color:green;
+}
+.lostres1:hover{
+    background-color: lightblue;
+}
+.lostres2{
+    grid-area:dos;
+    background-color:green;
+}
+.lostres2:hover{
+    background-color: yellow;
+}
+.lostres3{
+    grid-area:tres;
+    background-color:green;
+}
+.lostres3:hover{
+    background-color: lightblue;
+}
+.vertical{
+    grid-area:vertical1;
+    background-color:grey;
+}
+.vertical{
+    animation: blink  3s infinite;
+}
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
+}
+
+.horizontal{
+    grid-area:horizontal1;
+    background-color:orange;
+}
+.horizonta2{
+    grid-area:horizontal2;
+    background-color:orange;
+}
+.horizontal{
+    transition: filter 0.5s ease-in-out, opacity 0.5s ease-in-out;
+}
+.horizontal:hover{
+    filter: brightness(0.8) blur(5px);
+    opacity: 0.6;
+}
+.horizonta2{
+    animation: shake  3s infinite;
+}
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    50% { transform: translateX(10px); }
+    75% { transform: translateX(-10px); }
+    100% { transform: translateX(0); }
+}

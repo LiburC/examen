@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 10px;
+    padding: 10px;
+}
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 100px 200px 100px 100px 100px;
+    gap:10px;
+    grid-template-areas: 
+    "primero primero primero"
+    "segundo segundo segundo"
+    "uno dos tres"
+    "vertical1 horizontal1 horizontal1"
+    "vertical1 horizontal2 horizontal2";
+
+}
+.primero{
+    grid-area: primero;
+    background-color: blue;
+    text-align:center;
+    padding:30px;
+    color:white;
+    font-size:30px;
+}
+
+.segundo{
+    grid-area:segundo;
+    background-color:red;
+
+}
+.lostres1{
+    grid-area:uno;
+    background-color:green;
+}
+.lostres2{
+    grid-area:dos;
+    background-color:green;
+}
+.lostres3{
+    grid-area:tres;
+    background-color:green;
+}
+.vertical{
+    grid-area:vertical1;
+    background-color:grey;
+}
+.horizontal{
+    grid-area:horizontal1;
+    background-color:orange;
+}
+.horizonta2{
+    grid-area:horizontal2;
+    background-color:orange;
+}
